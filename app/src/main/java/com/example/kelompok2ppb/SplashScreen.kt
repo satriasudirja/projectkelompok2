@@ -7,12 +7,12 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.View
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.example.kelompok2ppb.ui.login.LoginActivity
+import com.google.firebase.auth.FirebaseAuth
 
 class SplashScreen : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
@@ -38,9 +38,21 @@ class SplashScreen : AppCompatActivity() {
         animatorSet.playTogether(largeLogoAnimator, smallLogoAnimator)
         animatorSet.start()
 
+        // Tunggu animasi selesai lalu cek status login
         Handler(Looper.getMainLooper()).postDelayed({
+            checkLoginStatus()
+        }, 2000) // Total waktu animasi (1 detik fade-in logo besar + 1 detik fade-in logo kecil)
+    }
+
+    private fun checkLoginStatus() {
+        val currentUser = FirebaseAuth.getInstance().currentUser
+        if (currentUser != null) {
+            // Jika pengguna sudah login, pindah ke MainActivity
             startActivity(Intent(this, MainActivity::class.java))
-            finish() // Menutup SplashScreen agar tidak kembali dengan tombol Back
-        }, 2000) // Total waktu (1 detik fade-in logo besar + 1 detik fade-in logo kecil)
+        } else {
+            // Jika belum login, pindah ke LoginActivity
+            startActivity(Intent(this, LoginActivity::class.java))
+        }
+        finish() // Menutup SplashScreen agar tidak kembali dengan tombol Back
     }
-    }
+}

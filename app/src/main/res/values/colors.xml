@@ -8,8 +8,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-
-
+    <color name="light_gray">#E0E0E0</color>
+    <color name="dark_gray">#757575</color>
+    <color name="blue">#2196F3</color>
+    <color name="gradient_start">#FF7F50</color> <!-- Coral -->
+    <color name="gradient_end">#FF1493</color>   <!-- Deep Pink -->
+    <color name="gray">#9E9E9E</color>
     <color name="hijau">#59106D63</color>
     <color name="oren">#FDA31A</color>
 </resources>

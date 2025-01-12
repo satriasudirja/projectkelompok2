@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "963356009882",
+    "project_id": "kelompok2ppb",
+    "storage_bucket": "kelompok2ppb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:963356009882:android:3253841bfb4942c3d0c623",
+        "android_client_info": {
+          "package_name": "com.example.kelompok2ppb"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYxJw_mtcIyp832EMvbaao55YDIYbiqJc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
