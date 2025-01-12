@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Kelompok2PPB</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="fakultas">Fakultas Teknik Dan Sains</string>
+    <string name="mesin">Teknik Mesin</string>
+    <string name="univ">UNIVERSITAS IBN KHALDUN BOGOR</string>
+    <string name="versi">Versi 1.0</string>
+    <string name="banner">Tes</string>
+</resources>
